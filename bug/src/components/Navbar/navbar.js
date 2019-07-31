@@ -7,44 +7,53 @@ import Logo from '../Logo/bug_icon.png';
 function Navbar() {
     return (
       <nav className="navbar navbar-expand-lg">
-        <Link className="navbar-brand" to="/">
-			<div className="logo-div">
-			<img src={Logo} className="logo"></img>
-			</div>
-        </Link>
-        <div>
+        
+        <div className="nav-links">
 			<ul className="navbar-nav">
-				<li className="nav-item">
-				<Link
-					to="/"
-					className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+				<li className="nav-item logo">
+					<Link className="navbar-brand" to="/">
+						<img src={Logo} className="logo"></img>
+        			</Link>
+				</li>
+				<li className="nav-item home">
+					<Link
+						to="/"
+						className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
 					>
-					home
-				</Link>
+						home
+					</Link>
 				</li>
-				<li className="nav-item">
-				<Link
-					to="/see"
-					className={window.location.pathname === "/see" ? "nav-link active" : "nav-link"}
-				>
-					see
-				</Link>
+				<li className="nav-item see">
+					<Link
+						to="/see"
+						className={window.location.pathname === "/see" ? "nav-link active" : "nav-link"}
+					>
+						see
+					</Link>
 				</li>
-				<li className="nav-item">
-				<Link
-					to="/do"
-					className={window.location.pathname === "/do" ? "nav-link active" : "nav-link"}
-				>
-					do
-				</Link>
+				<li className="nav-item do">
+					<Link
+						to="/do"
+						className={window.location.pathname === "/do" ? "nav-link active" : "nav-link"}
+					>
+						do
+					</Link>
 				</li>
-				<li className="nav-item">
-				<Link
-					to="/eat"
-					className={window.location.pathname === "/eat" ? "nav-link active" : "nav-link"}
-				>
-					eat
-				</Link>
+				<li className="nav-item eat">
+					<Link
+						to="/eat"
+						className={window.location.pathname === "/eat" ? "nav-link active" : "nav-link"}
+					>
+						eat
+					</Link>
+				</li>
+				<li className="nav-item login">
+					<Link
+						to="/eat"
+						className={window.location.pathname === "/eat" ? "nav-link active login" : "nav-link"}
+					>
+						login/sign up
+					</Link>
 				</li>
 			</ul>
         </div>
