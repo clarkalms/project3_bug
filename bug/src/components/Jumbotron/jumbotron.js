@@ -8,7 +8,7 @@ function Jumbotron() {
   return (
     <div className="jumbotron text-center">
     {/* <img src={Image} href={Home} className="home-img" /> */}
-      <h3>Bug App</h3>
+      <h3>the bug app</h3>
     </div>
   );
 }

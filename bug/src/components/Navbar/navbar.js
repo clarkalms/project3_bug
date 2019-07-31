@@ -3,6 +3,8 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import Image from '../../images/Project3_home.jpg';
 import Logo from '../Logo/bug_icon.png';
+import SearchBtn from "../../images/search_arrow.png";
+import Avatar from "../../images/avatar.png";
 
 function Navbar() {
     return (
@@ -47,14 +49,24 @@ function Navbar() {
 						eat
 					</Link>
 				</li>
+				<div className="search">
+					<input className="form-control mr-sm-2" type="search" placeholder="let's go places..." aria-label="Search"></input>
+				</div>
+				<div className="search-btn">
+					<input className="arrow" type="image" src={SearchBtn}></input>
+				</div>
 				<li className="nav-item login">
 					<Link
 						to="/eat"
 						className={window.location.pathname === "/eat" ? "nav-link active login" : "nav-link"}
 					>
 						login/sign up
+						
 					</Link>
 				</li>
+				<div className="avatar-div">
+					<img className="avatar-img" src={Avatar}></img>
+				</div>
 			</ul>
         </div>
     </nav>
