@@ -1,0 +1,12 @@
+nav {
+  background-image: url("../../images/Project3_home.jpg");
+  width: 100%;
+  height: 550px;
+}
+a {
+  color: white;
+}
+img.logo {
+  height: 50px;
+  width: 50px;
+}
