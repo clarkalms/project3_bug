@@ -1,20 +1,19 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import Image from '../../images/Project3_home.jpg';
+// import Image from '../../images/Project3_home.jpg';
 import Logo from '../Logo/bug_icon.png';
 import SearchBtn from "../../images/search_arrow.png";
 import Avatar from "../../images/avatar.png";
 
-function Navbar() {
+function Navbar(props) {
     return (
-      <nav className="navbar navbar-expand-lg">
-        
+      <nav className="navbar navbar-expand-lg" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
         <div className="nav-links">
 			<ul className="navbar-nav">
 				<li className="nav-item logo">
 					<Link className="navbar-brand" to="/">
-						<img src={Logo} className="logo"></img>
+						<img src={Logo} className="logo" alt="Logo"></img>
         			</Link>
 				</li>
 				<li className="nav-item home">
@@ -50,22 +49,22 @@ function Navbar() {
 					</Link>
 				</li>
 				<div className="search">
-					<input className="form-control mr-sm-2" type="search" placeholder="let's go places..." aria-label="Search"></input>
+					<input className="form-control mr-sm-2" type="search" placeholder={props.placeholder} aria-label="Search"></input>
 				</div>
 				<div className="search-btn">
-					<input className="arrow" type="image" src={SearchBtn}></input>
+					<input className="arrow" type="image" src={SearchBtn} alt="Image missing..."></input>
 				</div>
 				<li className="nav-item login">
 					<Link
-						to="/eat"
-						className={window.location.pathname === "/eat" ? "nav-link active login" : "nav-link"}
+						to="/login"
+						className={window.location.pathname === "/login" ? "nav-link active login" : "nav-link login"}
 					>
 						login/sign up
 						
 					</Link>
 				</li>
 				<div className="avatar-div">
-					<img className="avatar-img" src={Avatar}></img>
+					<img className="avatar-img" src={Avatar} alt="Avatar"></img>
 				</div>
 			</ul>
         </div>

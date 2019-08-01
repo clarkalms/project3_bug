@@ -2,7 +2,7 @@ import React from "react";
 import "./jumbotron.css";
 // import Image from "../../images/Project3_home.jpg";
 // import Home from "../../pages/home";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Jumbotron() {
   return (
